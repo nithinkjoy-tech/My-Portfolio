@@ -32,7 +32,7 @@ export default function Banner() {
         Hi, my name is
       </h3>
       <h2 className='flex items-center text-xl gap-1 text-4xl lgl:text-6xl font-titleFont font-semibold'>
-        {'Jeevan Suvarna'.split('').map((char, i) => (
+        {'Nithin K Joy'.split('').map((char, i) => (
           <span key={i} className='animated-span'>
             {char === ' ' ? '\u00A0' : char}
           </span>
@@ -41,7 +41,7 @@ export default function Banner() {
 
       <span className='text-textDark mt-2 lgl:mt-4'>Full Stack Developer</span>
       <p className='text-base md:max-w-[650px] text-textDark font-medium'>
-        I am a software developer with 4+ years of experiences, dedicated to
+        I am a software developer with 2+ years of experiences, dedicated to
         translating innovative ideas into&nbsp;
         <span className='text-textGreen underline-transition text-textUnderline'>
           efficient
@@ -58,7 +58,7 @@ export default function Banner() {
       </p>
 
       <a
-        href='https://drive.google.com/file/d/1ULlDXI-S_j3Ew7zrtkWQKccPBObsFHLu/view?usp=sharing'
+        href='https://drive.google.com/file/d/1PS2b4_C3hrP4iGsuXENvPaUB2A3CMcDx/view?usp=drive_link'
         target='_blank'
       >
         <button className='w-52 h-14 text-sm font-titleFont border border-textGreen rounded-md text-textGreen tracking-wide hover:bg-hoverColor duration-300'>

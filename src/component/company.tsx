@@ -10,7 +10,7 @@ export default function Company() {
         </span>
       </h3>
       <p className='text-sm mt-1 font-medium text-textDark'>
-        July 2021 - Present
+        April 2023 - Present
       </p>
       <ul className='mt-6 flex flex-col gap-4'>
         <li className='text-base flex gap-2 text-textDark'>

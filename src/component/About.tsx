@@ -2,41 +2,55 @@
 import Image from 'next/image';
 import Title from './Title';
 import {
-  SiJavascript,
-  SiTypescript,
-  SiReact,
-  SiNextdotjs,
-  SiVuedotjs,
-  SiNodedotjs,
-  SiHtml5,
-  SiCss3,
-  SiLess,
-  SiTailwindcss,
-  SiJest,
+    SiJavascript,
+    SiTypescript,
+    SiReact,
+    SiNextdotjs,
+    SiVuedotjs,
+    SiNodedotjs,
+    SiHtml5,
+    SiCss3,
+    SiLess,
+    SiTailwindcss,
+    SiJest,
+    SiRust,
+    SiSwift,
+    SiZig,
+    SiBun,
+    SiSvelte,
+    SiApple,
+    SiGit,
 } from 'react-icons/si';
-import { FaSitemap, FaCodeBranch } from 'react-icons/fa';
+import { FaSitemap, FaCodeBranch, FaOsi } from 'react-icons/fa';
 import { TbNetwork } from 'react-icons/tb';
 import { profile } from '@/assets';
 import useScrollReveal from '@/hooks/useScrollReveal';
 
 const techIcons = {
-  JavaScript: <SiJavascript />,
-  TypeScript: <SiTypescript />,
-  'React.js': <SiReact />,
-  'Next.js': <SiNextdotjs />,
-  'Vue.js': <SiVuedotjs />,
-  'Node.js': <SiNodedotjs />,
-  Fastify: <SiJavascript />, // fallback
-  'HTML / CSS / LESS': (
-    <div className='flex gap-1'>
-      <SiHtml5 /> <SiCss3 /> <SiLess />
-    </div>
-  ),
-  'Tailwind CSS': <SiTailwindcss />,
-  Jest: <SiJest />,
-  'System Design': <FaSitemap />,
-  DSA: <FaCodeBranch />,
-  Microservice: <TbNetwork />,
+    JavaScript: <SiJavascript />,
+    'React.js': <SiReact />,
+    'Next.js': <SiNextdotjs />,
+    'Vue.js': <SiVuedotjs />,
+    Svelte: <SiSvelte />,
+    'Node.js': <SiNodedotjs />,
+    'Express.js': <SiJavascript />, // fallback
+    'HTML / CSS / LESS': (
+        <div className='flex gap-1'>
+            <SiHtml5 /> <SiCss3 /> <SiLess />
+        </div>
+    ),
+    'Tailwind CSS': <SiTailwindcss />,
+    Jest: <SiJest />,
+    'System Design': <FaSitemap />,
+    DSA: <FaCodeBranch />,
+    Microservice: <TbNetwork />,
+    Rust: <SiRust />,
+    'Swift UI': <SiSwift />,
+    Ziglang: <SiZig />,
+    'Bun.js': <SiBun />,
+    'iOS Application': <SiApple />,
+    'Open Source': <FaOsi />,
+    Git: <SiGit />,
 };
 
 export default function About() {
@@ -56,17 +70,17 @@ export default function About() {
           <p>
             Hello, my name is{' '}
             <span className='text-textGreen underline-transition text-textUnderline'>
-              Jeevan Suvarna
+              Nithin K Joy
             </span>
             . I'm a dedicated <strong>Full-Stack Developer</strong> with over{' '}
-            <strong>3.5 years of experience</strong> crafting robust and
+            <strong>2+ years of experience</strong> crafting robust and
             scalable digital solutions. My journey in web development began in
-            college back in 2016, when I started exploring{' '}
+            college back in 2018, when I started exploring{' '}
             <strong>Node.js</strong> along with front-end technologies. Since
             then, I’ve deepened my expertise in modern stacks like{' '}
-            <strong>JavaScript</strong>, <strong>TypeScript</strong>,{' '}
+            <strong>JavaScript</strong>,{' '}
             <strong>Vue.js</strong>, <strong>React</strong>,{' '}
-            <strong>Next.js</strong>, and <strong>Fastify</strong>.
+            <strong>Next.js</strong>, and <strong>Express.js</strong>.
             <br />
             <br />
             Currently, I’m part of a fast-growing startup, where I specialize in{' '}
