@@ -7,6 +7,7 @@ import Projects from '@/component/Projects';
 import FullScreenLoader from '@/component/common/loader';
 import Footer from '@/component/footer';
 import { useEffect, useState } from 'react';
+import Opensource from "@/component/Opensource";
 // import Head from 'next/head'
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       <Banner />
       <About />
       <Work />
+      <Opensource/>
       <Projects />
       <Contact />
       <Footer />

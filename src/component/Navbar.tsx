@@ -55,6 +55,11 @@ export default function Navbar() {
       highlight: false,
     },
     {
+      name: 'Opensource',
+      link: '#opensource',
+      highlight: false,
+    },
+    {
       name: 'Project',
       link: '#project',
       highlight: false,
@@ -63,11 +68,6 @@ export default function Navbar() {
       name: 'Contact',
       link: '#contact',
       highlight: false,
-    },
-    {
-      name: 'Resume',
-      link: 'https://drive.google.com/file/d/1g8SJCWkpZ5uVGmrElD1ytoKQRDz554xU/view?usp=sharing',
-      highlight: true,
     },
   ];
   const [showToast, setShowToast] = useState(true);

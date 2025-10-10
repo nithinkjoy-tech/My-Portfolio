@@ -3,116 +3,185 @@ import { TiArrowForward } from 'react-icons/ti';
 export default function Company() {
   return (
     <div>
-      <h3>
-        Engineer{' '}
-        <span className='text-textGreen tracking-wide underline-transition text-textUnderline'>
+        <h3>
+            Engineer{' '}
+            <span className='text-textGreen tracking-wide underline-transition text-textUnderline'>
           Clover Bay Technologies Pvt Ltd
         </span>
-      </h3>
-      <p className='text-sm mt-1 font-medium text-textDark'>
-        April 2023 - Present
-      </p>
-      <ul className='mt-6 flex flex-col gap-4'>
-        <li className='text-base flex gap-2 text-textDark'>
-          <span className='text-textGreen mt-1'>
-            <TiArrowForward />
-          </span>
-          <div>
-            Led the successful migration of a large-scale e-commerce platform
-            from{' '}
-            <span className='text-textGreen underline-transition text-textUnderline'>
-              Vue.js to React
-            </span>
-            , significantly improving performance, scalability, and SEO.
-            Achieved up to{' '}
-            <strong className='text-textGreen'>80% enhancement</strong> in web
-            performance and user experience.
-          </div>
-        </li>
+        </h3>
+        <p className='text-sm mt-1 font-medium text-textDark'>
+            March 2023 - Present
+        </p>
 
-        <li className='text-base flex gap-2 text-textDark'>
-          <span className='text-textGreen mt-1'>
-            <TiArrowForward />
-          </span>
-          <div>
-            Designed and implemented a robust{' '}
-            <span className='text-textGreen underline-transition text-textUnderline'>
-              Backend-for-Frontend (BFF)
-            </span>{' '}
-            layer using{' '}
-            <span className='text-textGreen underline-transition text-textUnderline'>
-              Node.js
-            </span>{' '}
-            and{' '}
-            <span className='text-textGreen underline-transition text-textUnderline'>
-              Fastify
-            </span>
-            , efficiently handling user data across 21 countries and drastically
-            improving server response time and maintainability.
-          </div>
-        </li>
+        <h4 className='text-lg font-semibold text-textLight mt-2 mb-4 opacity-0'>
+            Lyca Mobile
+        </h4>
+        <ul className='flex flex-col gap-4'>
 
-        <li className='text-base flex gap-2 text-textDark'>
+            <li className='text-base flex gap-2 text-textDark'>
           <span className='text-textGreen mt-1'>
             <TiArrowForward />
           </span>
-          <div>
-            Built an engaging feature for a beauty e-commerce platform—a{' '}
-            <strong>reward points system</strong> linked to purchases, enabling
-            users to redeem points for vouchers and products. Developed in{' '}
-            <span className='text-textGreen underline-transition text-textUnderline'>
+                <div>
+                    Improved website performance by optimizing load times and enhancing
+                    user experience across devices by increasing Lighthouse performance
+                    score above{' '}
+                    <strong className='text-textGreen'>80%</strong>.
+                </div>
+            </li>
+
+            <li className='text-base flex gap-2 text-textDark'>
+          <span className='text-textGreen mt-1'>
+            <TiArrowForward />
+          </span>
+                <div>
+                    Upgraded core frameworks, migrating the project from{' '}
+                    <span className='text-textGreen underline-transition text-textUnderline'>
+              Next.js 14 to 15
+            </span>{' '}
+                    and{' '}
+                    <span className='text-textGreen underline-transition text-textUnderline'>
+              React 18 to 19
+            </span>
+                    , ensuring compatibility, stability, and access to the latest
+                    features.
+                </div>
+            </li>
+
+            <li className='text-base flex gap-2 text-textDark'>
+          <span className='text-textGreen mt-1'>
+            <TiArrowForward />
+          </span>
+                <div>
+                    Worked on SIM card porting functionality, enabling users to switch
+                    from any operator to Lyca.
+                </div>
+            </li>
+
+            <li className='text-base flex gap-2 text-textDark'>
+          <span className='text-textGreen mt-1'>
+            <TiArrowForward />
+          </span>
+                <div>
+                    Tech Stack:{' '}
+                    <span className='text-textGreen underline-transition text-textUnderline'>
+              Next.js
+            </span>
+                    ,{' '}
+                    <span className='text-textGreen underline-transition text-textUnderline'>
+              JavaScript
+            </span>
+                    ,{' '}
+                    <span className='text-textGreen underline-transition text-textUnderline'>
+              Redux
+            </span>
+                    ,{' '}
+                    <span className='text-textGreen underline-transition text-textUnderline'>
+              Material UI
+            </span>
+                    ,{' '}
+                    <span className='text-textGreen underline-transition text-textUnderline'>
+              SASS
+            </span>
+                </div>
+            </li>
+        </ul>
+
+        <h4 className='text-lg font-semibold text-textLight mt-2 mb-4 opacity-0'>
+            Swadesh
+        </h4>
+        <ul className='flex flex-col gap-4'>
+            <li className='text-base flex gap-2 text-textDark'>
+          <span className='text-textGreen mt-1'>
+            <TiArrowForward />
+          </span>
+                <div>
+                    Directed the transformation of a e-commerce frontend app,
+                    increasing user engagement by{' '}
+                    <strong className='text-textGreen'>40%</strong> through{' '}
+                    <span className='text-textGreen underline-transition text-textUnderline'>
               Vue.js
             </span>
-            , it improved user retention and interaction. Also revamped the
-            3-step checkout into a streamlined single-page flow, and delivered 3
-            major features in a short timeline through close collaboration with
-            backend developers and agile teams.
-          </div>
-        </li>
+                    ,{' '}
+                    <span className='text-textGreen underline-transition text-textUnderline'>
+              LESS
+            </span>
+                    , and server-side rendering.
+                </div>
+            </li>
 
-        <li className='text-base flex gap-2 text-textDark'>
+            <li className='text-base flex gap-2 text-textDark'>
           <span className='text-textGreen mt-1'>
             <TiArrowForward />
           </span>
-          <div>
-            Led a team of 4 in creating a customizable web theme using{' '}
-            <span className='text-textGreen underline-transition text-textUnderline'>
+                <div>
+                    Reduced memory and CPU usage by{' '}
+                    <strong className='text-textGreen'>80% - 90%</strong> by
+                    implementing virtual scroll on PLP pages.
+                </div>
+            </li>
+
+            <li className='text-base flex gap-2 text-textDark'>
+          <span className='text-textGreen mt-1'>
+            <TiArrowForward />
+          </span>
+                <div>
+                    Integrated complex sorting and filtering functionality, a global
+                    custom CTA, a reusable custom address card, and cart landing flows.
+                </div>
+            </li>
+
+            <li className='text-base flex gap-2 text-textDark'>
+          <span className='text-textGreen mt-1'>
+            <TiArrowForward />
+          </span>
+                <div>
+                    Achieved a{' '}
+                    <strong className='text-textGreen'>10x improvement</strong> in
+                    performance by optimizing PLP and PDP image loading and reducing the
+                    number of HTTP requests, leading to enhanced overall performance.
+                </div>
+            </li>
+
+            <li className='text-base flex gap-2 text-textDark'>
+          <span className='text-textGreen mt-1'>
+            <TiArrowForward />
+          </span>
+                <div>
+                    Improved key metrics such as Cumulative Layout Shift, Largest
+                    Contentful Paint, and First Contentful Paint through server-side
+                    rendering and code optimization.
+                </div>
+            </li>
+
+            <li className='text-base flex gap-2 text-textDark'>
+          <span className='text-textGreen mt-1'>
+            <TiArrowForward />
+          </span>
+                <div>
+                    Tech stack:{' '}
+                    <span className='text-textGreen underline-transition text-textUnderline'>
               Vue.js
             </span>
-            , enhancing both aesthetics and user control via a dedicated
-            platform application.
-          </div>
-        </li>
-
-        <li className='text-base flex gap-2 text-textDark'>
-          <span className='text-textGreen mt-1'>
-            <TiArrowForward />
-          </span>
-          <div>
-            Developed a performant admin dashboard using{' '}
-            <span className='text-textGreen underline-transition text-textUnderline'>
-              React
-            </span>{' '}
-            and{' '}
-            <span className='text-textGreen underline-transition text-textUnderline'>
-              GraphQL
+                    ,{' '}
+                    <span className='text-textGreen underline-transition text-textUnderline'>
+              JavaScript
             </span>
-            , with a strong focus on delivering seamless and intuitive user
-            experiences.
-          </div>
-        </li>
-
-        <li className='text-base flex gap-2 text-textDark'>
-          <span className='text-textGreen mt-1'>
-            <TiArrowForward />
-          </span>
-          <div>
-            Conducted regular code reviews, introduced unit testing, and
-            advocated best practices to improve code quality, maintainability,
-            and team productivity.
-          </div>
-        </li>
-      </ul>
+                    ,{' '}
+                    <span className='text-textGreen underline-transition text-textUnderline'>
+              LESS
+            </span>
+                    ,{' '}
+                    <span className='text-textGreen underline-transition text-textUnderline'>
+              CSS
+            </span>
+                    ,{' '}
+                    <span className='text-textGreen underline-transition text-textUnderline'>
+              Fynd Theme
+            </span>
+                </div>
+            </li>
+        </ul>
     </div>
   );
 }
