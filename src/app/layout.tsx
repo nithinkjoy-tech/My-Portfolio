@@ -18,64 +18,64 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  useEffect(() => {
-    const userLocationAndDevice = {
-      language: navigator.language, // e.g., "en-US"
-      platform: navigator.platform, // e.g., "MacIntel"
-      user_agent: navigator.userAgent, // e.g., full browser info
-      screen_resolution: `${window.screen.width}x${window.screen.height}`,
-    };
-    window.gtag('event', 'PORTFOLIO_LOAD', {
-      event_category: 'Portfolio',
-      event_label: 'Landing',
-      language: userLocationAndDevice.language,
-      platform: userLocationAndDevice.platform,
-      user_agent: userLocationAndDevice.user_agent,
-      screen_resolution: userLocationAndDevice.screen_resolution,
-    });
-  }, []);
 
   return (
     <html lang='en'>
       <head>
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='preconnect' href='https://fonts.gstatic.com' />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded&family=Fira+Code&display=swap'
-          rel='stylesheet'
-        />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@300&family=Montserrat:wght@300&display=swap'
-          rel='stylesheet'
-        />
-        <Script
-          strategy='afterInteractive'
-          src={`https://www.googletagmanager.com/gtag/js?id=G-RDPBH7631P`}
-        />
-        <Script
-          id='google-analytics'
-          strategy='afterInteractive'
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-RDPBH7631P');
-          `,
-          }}
-        />
+          <meta charSet='utf-8' />
+          <meta name='viewport' content='width=device-width, initial-scale=1' />
+          <title>Nithin K Joy - Full Stack Developer | React, Next.js & Node.js Expert</title>
+          <meta name='title' content='Nithin K Joy - Full Stack Developer | React, Next.js & Node.js Expert' />
+          <meta name='description' content='Experienced Full Stack Developer with 2+ years specializing in React, Next.js, Vue.js, and Node.js. Building scalable web applications, e-commerce platforms, and high-performance user interfaces in Mangaluru, Karnataka.' />
+          <meta name='keywords' content='Nithin K Joy, Full Stack Developer, React Developer, Next.js Developer, Vue.js Developer, Node.js Developer, Frontend Developer, JavaScript Developer, Web Developer Mangaluru, Software Engineer Karnataka, E-commerce Developer, Tailwind CSS, TypeScript Developer, Express.js Developer, Svelte, System Design, Microservices' />
+          <meta name='author' content='Nithin K Joy' />
+          <meta name='robots' content='index, follow' />
+          <meta name='language' content='English' />
+          <meta name='revisit-after' content='7 days' />
 
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-              })(window, document, "clarity", "script", "ni2h9q5q9y");
-              `,
-          }}
-        />
+          {/* Open Graph / Facebook */}
+          <meta property='og:type' content='website' />
+          <meta property='og:url' content='https://nithinkjoy.dev' />
+          <meta property='og:title' content='Nithin K Joy - Full Stack Developer | React, Next.js & Node.js Expert' />
+          <meta property='og:description' content='Experienced Full Stack Developer specializing in React, Next.js, Vue.js, and Node.js. Building scalable web applications and high-performance user interfaces.' />
+          <meta property='og:image' content='https://nithinkjoy.dev/og-image.jpg' />
+          <meta property='og:image:width' content='1200' />
+          <meta property='og:image:height' content='630' />
+          <meta property='og:image:alt' content='Nithin K Joy - Full Stack Developer Portfolio' />
+          <meta property='og:site_name' content='Nithin K Joy Portfolio' />
+          <meta property='og:locale' content='en_US' />
+
+          {/* Twitter */}
+          <meta name='twitter:card' content='summary_large_image' />
+          <meta name='twitter:url' content='https://nithinkjoy.dev/' />
+          <meta name='twitter:title' content='Nithin K Joy - Full Stack Developer' />
+          <meta name='twitter:description' content='Full Stack Developer specializing in React, Next.js, Vue.js & Node.js | 2+ years experience' />
+          <meta name='twitter:image' content='https://nithinkjoy.dev/og-image.jpg' />
+          <meta name='twitter:creator' content='@nithinkjoy_tech' />
+
+          {/* Additional Meta Tags */}
+          <meta name='theme-color' content='#0a192f' />
+          <meta name='apple-mobile-web-app-capable' content='yes' />
+          <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+          <link rel='canonical' href='https://nithinkjoy.dev/' />
+
+          {/* Favicon */}
+          <link rel='icon' href='/favicon.ico' />
+          <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+          <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+          <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+
+          {/* Fonts */}
+          <link rel='preconnect' href='https://fonts.googleapis.com' />
+          <link rel='preconnect' href='https://fonts.gstatic.com' />
+          <link
+              href='https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded&family=Fira+Code&display=swap'
+              rel='stylesheet'
+          />
+          <link
+              href='https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@300&family=Montserrat:wght@300&display=swap'
+              rel='stylesheet'
+          />
       </head>
       <body>
         <main className='w-full h-screen overflow-x-hidden overflow-y-scroll font-bodyFont bg-bodyColor text-textLight scrollbar scrollbar-track-textDark/20 scrollbar-thumb-textDark/70'>

@@ -23,7 +23,7 @@ import {
 } from 'react-icons/si';
 import { FaSitemap, FaCodeBranch, FaOsi } from 'react-icons/fa';
 import { TbNetwork } from 'react-icons/tb';
-import { profile } from '@/assets';
+import profile from '@/assets/images/profile.png';
 import useScrollReveal from '@/hooks/useScrollReveal';
 
 const techIcons = {

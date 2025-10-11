@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Svelte OTP Input",
+    "description": "A flexible and customizable OTP (One-Time Password) input component for Svelte 5+ applications.",
+    "tech": ["Svelte", "Sveltekit","TailWind CSS", "Cloudflare Workers"],
+    "image": "/images/svelte-otp-input.png",
+    "reverse": true,
+    "github": "https://github.com/nithinkjoy-tech/svelte-otp-input",
+    "live": "https://www.npmjs.com/package/svelte-otp-input"
+  },
+  {
+    "id": 2,
+    "title": "Hotel Room Booking Website",
+    "description": "A FullStack hotel room booking website featuring a fast, accessible UI for browsing rooms, filtering by date and amenities, viewing room details with image galleries, and completing secure reservations. Built with a component-driven architecture for easy maintenance and extensibility.",
+    "tech": ["React.js", "Node.js","MongoDB", "Express.js", "TailWind CSS"],
+    "image": "/images/hotelbook-react.png",
+    "reverse": false,
+    "github": "https://github.com/nithinkjoy-tech/hotelbook-react",
+    "live": ""
+  },
+  {
+    "id": 3,
+    "title": "Svelte OTP Docs Website",
+    "description": "A clean and detailed documentation website for the svelte-otp-input package. Built with SvelteKit, site kit and Tailwind CSS.",
+    "tech": ["Svelte", "Sveltekit","Site kit","TailWind CSS"],
+    "image": "/images/svelte-otp-docs.png",
+    "reverse": true,
+    "github": "https://github.com/nithinkjoy-tech/svelte-otp-input-docs",
+    "live": "https://nithinkjoy.dev/docs/svelte-otp-input/basic-usage"
+  }
+]

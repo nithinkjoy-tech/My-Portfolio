@@ -2,27 +2,12 @@
 
 import Image from 'next/image';
 import Title from './Title';
-import { project1, project2, project3, project4 } from '@/assets';
 import { TbBrandGithub } from 'react-icons/tb';
 import { RxOpenInNewWindow } from 'react-icons/rx';
 import useScrollReveal from '@/hooks/useScrollReveal';
-import { useEffect, useState } from 'react';
-import { fetchRemoteConfig } from '../helper/firebase';
+import projects from "../helper/projects.json"
 export default function Projects() {
   const { ref, isVisible } = useScrollReveal();
-  const [projects, setProjects] = useState<any>([]);
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      const res = await fetchRemoteConfig();
-      console.log(res, 'res');
-      setProjects(res);
-    };
-
-    fetchProjects();
-  }, []);
-
-  // if (projects?.length) return <></>;
 
   return (
     <section

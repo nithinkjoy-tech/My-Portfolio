@@ -93,157 +93,169 @@ export default function Navbar() {
           height={40}
         />
       </Link>
-      <div className='flex max-w-container h-full mx-auto py-1 font-titleFont flex items-center justify-between gap-3'>
-        <div className='hidden mdl:inline-flex items-center gap-7'>
-          <ul className='flex text-[13px] gap-7 align-items'>
-            {navList.map((nav) => {
-              return (
-                <Link
-                  href={nav.link}
-                  onClick={(e) => handleScroll(e)}
-                  className='flex item-center gap-1 font-medium text-navBarText hover:text-textGreen cursor-pointer duration-300 nav-link'
-                >
-                  <li>{nav.name}</li>
-                </Link>
-              );
-            })}
-          </ul>
-
-          {!isMobile && (
-            <div>
-              <ToggleButton className={''} />
-              <div className='absolute top-full mt-2 -translate-x-1/2'>
-                <Toast
-                  message='Now with theme switch!'
-                  show={showToast}
-                  onClose={() => setShowToast(false)}
-                />
-              </div>
-            </div>
-          )}
-
-          <a
-            href='https://drive.google.com/file/d/1ULlDXI-S_j3Ew7zrtkWQKccPBObsFHLu/view?usp=sharing?usp=sharing'
-            target='_blank'
-          >
-            <button className='border border-textGreen rounded-md text-textGreen text-[13px] px-6 py-3 hover:bg-hoverColor duration-200'>
-              Resume
-            </button>
-          </a>
-        </div>
-        {isMobile && <ToggleButton className={'mobile'} />}
         <div
-          onClick={() => setShowMenu(true)}
-          className='w-6  h-5 flex flex-col justify-between items-center mdl:hidden text-4x1 text-textGReen cursor-pointer overflow cursor-pointer overflow-hidden group'
-        >
-          <span className='w-full h-[2px] bg-textGreen inline-flex transform translate-x-2 group-hover:translate-x-2 transition-all ease-in-out duration-300'></span>
-          <span className='w-full h-[2px] bg-textGreen inline-flex transform translate-x-3 group-hover:translate-x-0 transition-all ease-in-out duration-300'></span>
-          <span className='w-full h-[2px] bg-textGreen inline-flex transform translate-x-1 group-hover:translate-x-3 transition-all ease-in-out duration-300'></span>
-        </div>
-        {showMenu && (
-          <div
-            ref={(node) => (ref.current = node)}
-            className='fixed mdl:hidden top-0 right-0 w-full h-screen bg-black bg-opacity-50 flex fkex-col items-end'
-          >
-            <motion.div
-              initial={{ x: 20, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.3 }}
-              className='w-[100%] overflow-y-scroll scrollbarHide bg-bodyColor flex flex-col items-center px-4 py-10 relative bg-[var(--body-color)] rounded-t-[32px] border border-[#4b4b4b] h-[60%]'
-            >
-              <MdOutlineClose
-                onClick={() => setShowMenu(false)}
-                className='text-3xl text-textGreen cursor-pointer hover:text-red-500 absolute top-4 right-4'
-              />
-              <div className='flex flex-col items-center gap-7'>
-                <ul className='flex flex-col text-base gap-7 '>
-                  {navList.map((nav) => {
-                    return (
-                      <Link
-                        className={`flex flex-col text-base gap-7 justify-center items-center rounded-full p-[12px] w-[150px] translate-x-[-10px] translate-z-0 ${
-                          nav.highlight ? 'border border-textGreen' : ''
-                        }`}
-                        href={nav.link}
-                        onClick={(e) => handleScroll(e)}
-                      >
-                        <motion.li
-                          initial={{ x: 20, opacity: 0 }}
-                          animate={{ x: 0, opacity: 1 }}
-                          transition={{
-                            duration: 0.2,
-                            delay: 0.1,
-                            ease: 'easeIn',
-                          }}
-                        >
-                          {nav.name}
-                        </motion.li>
-                      </Link>
-                    );
-                  })}
+            className='flex max-w-container h-full mx-auto py-1 font-titleFont flex items-center justify-between gap-5'>
+            <a href="https://nithinkjoy.dev/docs/svelte-otp-input/basic-usage" target="_blank">
+                <div className='flex items-center gap-3 p-3 border-2 border-[#DF5C3C] rounded-[34px] cursor-pointer text-white px-4 py-2 hover:text-[#d64524] hover:border-[#d64524] transition-all duration-300'>
+                    <div className="flex whitespace-nowrap text-[#DF5C3C]">
+                        Svelte OTP Docs
+                    </div>
+                </div>
+            </a>
+            <div className='hidden mdl:inline-flex itemscenter gap-7'>
+                <ul className='flex text-[13px] gap-7 align-items items-center'>
+                    {navList.map((nav) => {
+                        return (
+                            <Link
+                                href={nav.link}
+                                onClick={(e) => handleScroll(e)}
+                                className='flex item-center gap-1 font-medium text-navBarText hover:text-textGreen cursor-pointer duration-300 nav-link'
+                            >
+                                <li>{nav.name}</li>
+                            </Link>
+                        );
+                    })}
                 </ul>
-              </div>
-              <div className='flex gap-6 mt-8'>
-                <motion.a
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 1, ease: 'easeIn' }}
-                  href='https://github.com/jeevansuvarna'
-                  target='_blank'
+
+                {!isMobile && (
+                    <div>
+                        <ToggleButton className={''}/>
+                        <div className='absolute top-full mt-2 -translate-x-1/2'>
+                            <Toast
+                                message='Now with theme switch!'
+                                show={showToast}
+                                onClose={() => setShowToast(false)}
+                            />
+                        </div>
+                    </div>
+                )}
+
+                <a
+                    href='https://drive.google.com/file/d/1PS2b4_C3hrP4iGsuXENvPaUB2A3CMcDx/view'
+                    target='_blank'
                 >
+                    <button
+                        className='border border-textGreen rounded-md text-textGreen text-[13px] px-6 py-3 hover:bg-hoverColor duration-200'>
+                        Resume
+                    </button>
+                </a>
+            </div>
+            {isMobile && <ToggleButton className={'mobile'}/>}
+            <div
+                onClick={() => setShowMenu(true)}
+                className='w-6  h-5 flex flex-col justify-between items-center mdl:hidden text-4x1 text-textGReen cursor-pointer overflow cursor-pointer overflow-hidden group'
+            >
+                <span
+                    className='w-full h-[2px] bg-textGreen inline-flex transform translate-x-2 group-hover:translate-x-2 transition-all ease-in-out duration-300'></span>
+                <span
+                    className='w-full h-[2px] bg-textGreen inline-flex transform translate-x-3 group-hover:translate-x-0 transition-all ease-in-out duration-300'></span>
+                <span
+                    className='w-full h-[2px] bg-textGreen inline-flex transform translate-x-1 group-hover:translate-x-3 transition-all ease-in-out duration-300'></span>
+            </div>
+            {showMenu && (
+                <div
+                    ref={(node) => (ref.current = node)}
+                    className='fixed mdl:hidden top-0 right-0 w-full h-screen bg-black bg-opacity-50 flex fkex-col items-end'
+                >
+                    <motion.div
+                        initial={{x: 20, opacity: 0}}
+                        animate={{x: 0, opacity: 1}}
+                        transition={{duration: 0.3}}
+                        className='w-[100%] overflow-y-scroll scrollbarHide bg-bodyColor flex flex-col items-center px-4 py-10 relative bg-[var(--body-color)] rounded-t-[32px] border border-[#4b4b4b] h-[60%]'
+                    >
+                        <MdOutlineClose
+                            onClick={() => setShowMenu(false)}
+                            className='text-3xl text-textGreen cursor-pointer hover:text-red-500 absolute top-4 right-4'
+                        />
+                        <div className='flex flex-col items-center gap-7'>
+                            <ul className='flex flex-col text-base gap-7 '>
+                                {navList.map((nav) => {
+                                    return (
+                                        <Link
+                                            className={`flex flex-col text-base gap-7 justify-center items-center rounded-full p-[12px] w-[150px] translate-x-[-10px] translate-z-0 ${
+                                                nav.highlight ? 'border border-textGreen' : ''
+                                            }`}
+                                            href={nav.link}
+                                            onClick={(e) => handleScroll(e)}
+                                        >
+                                            <motion.li
+                                                initial={{x: 20, opacity: 0}}
+                                                animate={{x: 0, opacity: 1}}
+                                                transition={{
+                                                    duration: 0.2,
+                                                    delay: 0.1,
+                                                    ease: 'easeIn',
+                                                }}
+                                            >
+                                                {nav.name}
+                                            </motion.li>
+                                        </Link>
+                                    );
+                                })}
+                            </ul>
+                        </div>
+                        <div className='flex gap-6 mt-8'>
+                            <motion.a
+                                initial={{y: 20, opacity: 0}}
+                                animate={{y: 0, opacity: 1}}
+                                transition={{delay: 1, ease: 'easeIn'}}
+                                href='https://github.com/nithinkjoy-tech'
+                                target='_blank'
+                            >
                   <span
-                    className='w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline flex
+                      className='w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline flex
                                         items-center justify-center hover;text-textGreen cursor-pointer hover:-translate-y-2 transitionall duration-300'
                   >
-                    <VscGithubAlt />
+                    <VscGithubAlt/>
                   </span>
-                </motion.a>
-                <motion.a
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 1, ease: 'easeIn' }}
-                  href='https://leetcode.com/u/jeevansuvarna71/'
-                  target='_blank'
-                >
+                            </motion.a>
+                            <motion.a
+                                initial={{y: 20, opacity: 0}}
+                                animate={{y: 0, opacity: 1}}
+                                transition={{delay: 1, ease: 'easeIn'}}
+                                href='https://leetcode.com/u/nithinkjoy/'
+                                target='_blank'
+                            >
                   <span
-                    className='w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline flex
+                      className='w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline flex
                                         items-center justify-center hover;text-textGreen cursor-pointer hover:-translate-y-2 transitionall duration-300'
                   >
-                    <SiLeetcode />
+                    <SiLeetcode/>
                   </span>
-                </motion.a>
-                <motion.a
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 1, ease: 'easeIn' }}
-                  href='https://www.instagram.com/jeevaaannnn?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr'
-                  target='_blank'
-                >
+                            </motion.a>
+                            <motion.a
+                                initial={{y: 20, opacity: 0}}
+                                animate={{y: 0, opacity: 1}}
+                                transition={{delay: 1, ease: 'easeIn'}}
+                                href='https://www.instagram.com/nithinkjoy'
+                                target='_blank'
+                            >
                   <span
-                    className='w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline flex
+                      className='w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline flex
                                         items-center justify-center hover;text-textGreen cursor-pointer hover:-translate-y-2 transitionall duration-300'
                   >
-                    <LuInstagram />
+                    <LuInstagram/>
                   </span>
-                </motion.a>
-                <motion.a
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 1, ease: 'easeIn' }}
-                  href='https://www.linkedin.com/in/jeevan-suvarna-741b19186/'
-                  target='_blank'
-                >
+                            </motion.a>
+                            <motion.a
+                                initial={{y: 20, opacity: 0}}
+                                animate={{y: 0, opacity: 1}}
+                                transition={{delay: 1, ease: 'easeIn'}}
+                                href='https://www.linkedin.com/in/nithinkjoy-tech/'
+                                target='_blank'
+                            >
                   <span
-                    className='w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline flex
+                      className='w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline flex
                                         items-center justify-center hover;text-textGreen cursor-pointer hover:-translate-y-2 transitionall duration-300'
                   >
-                    <LuLinkedin />
+                    <LuLinkedin/>
                   </span>
-                </motion.a>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </div>
+                            </motion.a>
+                        </div>
+                    </motion.div>
+                </div>
+            )}
+        </div>
     </div>
   );
 }

@@ -162,3 +162,26 @@ body {
 .animated-span:hover {
   animation: jiggle 0.6s ease-in-out;
 }
+
+@keyframes border-move {
+    0% {
+        border-image-source: linear-gradient(90deg, #DF5C3C 0%, transparent 100%);
+    }
+    25% {
+        border-image-source: linear-gradient(180deg, #DF5C3C 0%, transparent 100%);
+    }
+    50% {
+        border-image-source: linear-gradient(270deg, #DF5C3C 0%, transparent 100%);
+    }
+    75% {
+        border-image-source: linear-gradient(360deg, #DF5C3C 0%, transparent 100%);
+    }
+    100% {
+        border-image-source: linear-gradient(90deg, #DF5C3C 0%, transparent 100%);
+    }
+}
+
+.animate-border-move {
+    border-image-slice: 1;
+    animation: border-move 4s linear infinite;
+}

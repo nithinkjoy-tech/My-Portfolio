@@ -20,7 +20,7 @@ export default function Contact() {
         Whether you have a question, any new opporunities or just want to say
         hi, My inbox is always open!{' '}
       </p>
-      <a href='mailto:jeevansuvarna71@gmail.com'>
+      <a href='mailto:nithinkjoy1@gmail.com'>
         <button className='w-40 h-14 border border-textGreen mt-6 font-titleFont tet-sm text-textGreen tracking-wider rounded-md hover:bg-hoverColor duration-300'>
           Say Hello !!
         </button>

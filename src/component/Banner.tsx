@@ -58,7 +58,7 @@ export default function Banner() {
       </p>
 
       <a
-        href='https://drive.google.com/file/d/1PS2b4_C3hrP4iGsuXENvPaUB2A3CMcDx/view?usp=drive_link'
+        href='https://drive.google.com/file/d/1PS2b4_C3hrP4iGsuXENvPaUB2A3CMcDx/view'
         target='_blank'
       >
         <button className='w-52 h-14 text-sm font-titleFont border border-textGreen rounded-md text-textGreen tracking-wide hover:bg-hoverColor duration-300'>

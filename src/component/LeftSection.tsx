@@ -9,7 +9,7 @@ export default function LeftSection() {
     <div className='w-full h-full flex flex-col items-center justify-end gap-5 text-textLight'>
       <div className='flex flex-col gap-5'>
         <a
-          href='https://github.com/jeevansuvarna'
+          href='https://github.com/nithinkjoy-tech'
           target='_blank'
           title='Github'
         >
@@ -18,7 +18,7 @@ export default function LeftSection() {
           </span>
         </a>
         <a
-          href='https://leetcode.com/u/jeevansuvarna71/'
+          href='https://leetcode.com/u/nithinkjoy/'
           target='_blank'
           title='Leetcode'
         >
@@ -27,7 +27,7 @@ export default function LeftSection() {
           </span>
         </a>
         <a
-          href='https://www.linkedin.com/in/jeevan-suvarna-741b19186/'
+          href='https://www.linkedin.com/in/nithinkjoy-tech/'
           target='_blank'
           title='LinkedIn'
         >
@@ -36,7 +36,7 @@ export default function LeftSection() {
           </span>
         </a>
         <a
-          href='https://www.instagram.com/jeevaaannnn?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr'
+          href='https://www.instagram.com/nithinkjoy'
           target='_blank'
           title='Instagram'
         >
