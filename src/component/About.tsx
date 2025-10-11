@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 import Title from './Title';
 import {
     SiJavascript,
@@ -23,7 +22,6 @@ import {
 } from 'react-icons/si';
 import { FaSitemap, FaCodeBranch, FaOsi } from 'react-icons/fa';
 import { TbNetwork } from 'react-icons/tb';
-import profile from '@/assets/images/profile.png';
 import useScrollReveal from '@/hooks/useScrollReveal';
 
 const techIcons = {
@@ -131,12 +129,12 @@ export default function About() {
         <div className='w-full lgl:w-1/3 h-80 relative group max-lg:hidden'>
           <div className='absolute w-full h-80 -left-6 -top-6 rounded-lg'>
             <div className='w-full h-full relative z-20 flex pl-6  lgl:pl-0 '>
-              <Image
+              <img
                 className='rounded-lg h-full object-cover'
-                src={profile}
+                src="/images/profile.png"
                 alt='profilImg'
                 width={500}
-              ></Image>
+              ></img>
               <div className='hidden lgl:inline-block absolute w-full h-80 bg-textGreen/20 rounded-md top-0 left-0 group-hover:bg-transparent duration-300'></div>
             </div>
             <div className='hidden lgl:inline-flex top-0 w-full h-80 border-2 border-textGreen rounded-md group-hover:-translate-x-4 group-hover:-translate-y-4 transition-transform duration-300 absolute'></div>

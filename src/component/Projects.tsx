@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Title from './Title';
 import { TbBrandGithub } from 'react-icons/tb';
 import { RxOpenInNewWindow } from 'react-icons/rx';
@@ -39,7 +38,7 @@ export default function Projects() {
                   className='w-full xl:w-1/2 h-auto group'
                 >
                   <div className='relative'>
-                    <Image
+                    <img
                       className='w-full h-full object-contain border border-[var(--text-underline)] rounded-md max-h-[332px]'
                       src={project.image}
                       alt={project.title}

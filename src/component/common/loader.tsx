@@ -1,6 +1,5 @@
 import React from 'react';
-import loaderGif from '../../assets/images/loader.gif'; // Replace with your loader GIF path
-import Image from 'next/image';
+import loaderGif from '../../../public/images/loader.gif'; // Replace with your loader GIF path
 
 const FullScreenLoader = () => {
   return (
@@ -8,8 +7,8 @@ const FullScreenLoader = () => {
       className='fixed inset-0 bg-black flex items-center justify-center '
       style={{ zIndex: 1000 }}
     >
-      <Image
-        src={loaderGif}
+      <img
+        src="/images/loader.gif"
         alt='Loading...'
         className='w-20 h-20 object-contain'
       />
