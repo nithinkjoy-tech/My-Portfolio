@@ -159,7 +159,7 @@ export default function Navbar() {
                         initial={{x: 20, opacity: 0}}
                         animate={{x: 0, opacity: 1}}
                         transition={{duration: 0.3}}
-                        className='w-[100%] overflow-y-scroll scrollbarHide bg-bodyColor flex flex-col items-center px-4 py-10 relative bg-[var(--body-color)] rounded-t-[32px] border border-[#4b4b4b] !h-[60svh]'
+                        className='w-[100%] overflow-y-scroll scrollbarHide bg-bodyColor flex flex-col items-center px-4 py-10 relative bg-[var(--body-color)] rounded-t-[32px] border border-[#4b4b4b] !h-[85svh]'
                     >
                         <MdOutlineClose
                             onClick={() => setShowMenu(false)}
