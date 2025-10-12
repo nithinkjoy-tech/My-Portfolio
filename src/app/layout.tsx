@@ -78,7 +78,7 @@ export default function RootLayout({
           />
       </head>
       <body>
-        <main className='w-full h-screen overflow-x-hidden overflow-y-scroll font-bodyFont bg-bodyColor text-textLight scrollbar scrollbar-track-textDark/20 scrollbar-thumb-textDark/70 h-[100svh]'>
+        <main className='w-full h-screen overflow-x-hidden overflow-y-scroll font-bodyFont bg-bodyColor text-textLight scrollbar scrollbar-track-textDark/20 scrollbar-thumb-textDark/70 !h-[100svh]'>
           <Navbar />
           <div className='w-full h-[88vh] xl:flex items-center gap-20 justify-between'>
             <div className='hidden xl:flex w-32 h-full fixed left-0 bottom-0'>
