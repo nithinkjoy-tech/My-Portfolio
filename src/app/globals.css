@@ -114,6 +114,7 @@ body {
 
 .custom-bg {
   background-color: color-mix(in oklab, var(--body-color) 60%, transparent);
+  backdrop-filter: blur(6px);
 }
 
 /* globals.css */
