@@ -1,6 +1,8 @@
 name = "my-portfolio-router"
 main = "_worker.js"
 compatibility_date = "2024-01-01"
+type = "service"
 
 [[routes]]
 pattern = "nithinkjoy.dev/docs/svelte-otp-input*"
+zone_name = "nithinkjoy.dev"
