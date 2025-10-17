@@ -93,7 +93,7 @@ export default function Navbar() {
       </Link>
         <div
             className='flex max-w-container h-full mx-auto py-1 font-titleFont flex items-center justify-between gap-5 sm:gap-2'>
-            <a href="https://nithinkjoy.dev/docs/svelte-otp-input/basic-usage" target="_blank">
+            <a href="/docs/svelte-otp-input/basic-usage" target="_blank">
                 <div className='flex items-center gap-3 p-3 sm:p-2 border-2 border-[#DF5C3C] rounded-[34px] cursor-pointer text-white px-4 py-2 hover:text-[#d64524] hover:border-[#d64524] transition-all duration-300'>
                     <div className="flex whitespace-nowrap text-[#DF5C3C]">
                         Svelte OTP Docs
