@@ -1,26 +1,43 @@
 export default {
-    async fetch(request) {
+    async fetch(request, env) {
         const url = new URL(request.url);
 
+        // Check if request is for Svelte docs
         if (url.pathname.startsWith('/docs/svelte-otp-input')) {
-            // Fetch from your Svelte docs without redirecting
-            const svelteUrl = new URL(request.url);
-            svelteUrl.pathname = svelteUrl.pathname.replace('/docs/svelte-otp-input', '');
-            svelteUrl.hostname = 'svelte-otp-input-docs.pages.dev';
-            svelteUrl.protocol = 'https:';
+            try {
+                const pathWithoutPrefix = url.pathname.replace('/docs/svelte-otp-input', '') || '/';
 
-            const response = await fetch(svelteUrl);
+                const svelteUrl = new URL(request.url);
+                svelteUrl.hostname = 'svelte-otp-input-docs.pages.dev';
+                svelteUrl.pathname = pathWithoutPrefix;
+                svelteUrl.protocol = 'https:';
 
-            // Clone the response so we can modify headers if needed
-            const newResponse = new Response(response.body, response);
+                const response = await fetch(svelteUrl.toString(), {
+                    method: request.method,
+                    headers: request.headers,
+                    body: request.body
+                });
 
-            // Add headers to prevent caching issues
-            newResponse.headers.set('Cache-Control', 'public, max-age=3600');
+                // If it's HTML, rewrite relative paths
+                if (response.headers.get('content-type')?.includes('text/html')) {
+                    let html = await response.text();
+                    html = html.replace(/href="\/(?!\/)/g, 'href="/docs/svelte-otp-input/');
+                    html = html.replace(/src="\/(?!\/)/g, 'src="/docs/svelte-otp-input/');
 
-            return newResponse;
+                    return new Response(html, {
+                        status: response.status,
+                        statusText: response.statusText,
+                        headers: response.headers
+                    });
+                }
+
+                return response;
+            } catch (error) {
+                return new Response('Error proxying to Svelte docs: ' + error.message, { status: 500 });
+            }
         }
 
-        // Otherwise route to Next.js (default)
+        // For all other routes, let Next.js handle it
         return fetch(request);
     }
 };
