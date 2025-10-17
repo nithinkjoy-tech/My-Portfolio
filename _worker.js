@@ -3,14 +3,21 @@ export default {
         const url = new URL(request.url);
 
         if (url.pathname.startsWith('/docs/svelte-otp-input')) {
-            // Route to your Svelte docs
+            // Fetch from your Svelte docs without redirecting
             const svelteUrl = new URL(request.url);
-            // Replace the path prefix to route to the root of your Svelte site
             svelteUrl.pathname = svelteUrl.pathname.replace('/docs/svelte-otp-input', '');
             svelteUrl.hostname = 'svelte-otp-input-docs.pages.dev';
             svelteUrl.protocol = 'https:';
 
-            return fetch(svelteUrl);
+            const response = await fetch(svelteUrl);
+
+            // Clone the response so we can modify headers if needed
+            const newResponse = new Response(response.body, response);
+
+            // Add headers to prevent caching issues
+            newResponse.headers.set('Cache-Control', 'public, max-age=3600');
+
+            return newResponse;
         }
 
         // Otherwise route to Next.js (default)
