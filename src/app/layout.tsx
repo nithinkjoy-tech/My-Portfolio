@@ -19,14 +19,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 
-    useEffect(() => {
-        let main = document.getElementById('main-id')
-        if(main && main.scrollTop==0) {
-            main?.scrollBy(0, 30)
-            main?.scrollTo(0,0)
-        }
-    }, []);
-
   return (
     <html lang='en'>
       <head>

@@ -52,7 +52,7 @@ const techIcons = {
 };
 
 export default function About() {
-  const { ref, isVisible } = useScrollReveal();
+  const { ref, isVisible } = useScrollReveal(0);
 
   return (
     <section
