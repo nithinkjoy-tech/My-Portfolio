@@ -23,6 +23,7 @@ export default function RootLayout({
         let main = document.getElementById('main-id')
         if(main && main.scrollTop==0) {
             main?.scrollBy(0, 30)
+            main?.scrollTo(0,0)
         }
     }, []);
 
