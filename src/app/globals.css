@@ -186,3 +186,13 @@ body {
     border-image-slice: 1;
     animation: border-move 4s linear infinite;
 }
+
+.btn-padding {
+    padding: 5px 8px;
+}
+
+@media (min-width: 1024px) {
+    .btn-padding {
+        padding: 8px 16px;
+    }
+}

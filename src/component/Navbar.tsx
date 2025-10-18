@@ -94,13 +94,13 @@ export default function Navbar() {
         <div
             className='flex max-w-container h-full mx-auto py-1 font-titleFont flex items-center justify-between gap-5 sm:gap-2'>
             <a href="/docs/svelte-otp-input/basic-usage">
-                <div className='flex items-center gap-3 p-3 sm:p-2 border-2 border-[#DF5C3C] rounded-[34px] cursor-pointer text-white px-4 py-2 hover:text-[#d64524] hover:border-[#d64524] transition-all duration-300'>
-                    <div className="flex whitespace-nowrap text-[#DF5C3C]">
+                <div className='flex items-center gap-3 btn-padding border-2 border-[#DF5C3C] rounded-[34px] cursor-pointer text-white px-4 py-2 hover:text-[#d64524] hover:border-[#d64524] transition-all duration-300'>
+                    <div className="flex whitespace-nowrap text-[#DF5C3C] text-sm">
                         Svelte OTP Docs
                     </div>
                 </div>
             </a>
-            <div className='hidden mdl:inline-flex itemscenter gap-7'>
+            <div className='hidden mdl:inline-flex items-center gap-7'>
                 <ul className='flex text-[13px] gap-7 align-items items-center'>
                     {navList.map((nav) => {
                         return (
