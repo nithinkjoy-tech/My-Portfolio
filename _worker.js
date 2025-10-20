@@ -1,12 +1,10 @@
 export default {
     async fetch(request, env) {
         const url = new URL(request.url);
-
         // Check if request is for Svelte docs
         if (url.pathname.startsWith('/docs/svelte-otp-input')) {
             try {
                 const pathWithoutPrefix = url.pathname.replace('/docs/svelte-otp-input', '') || '/';
-
                 const svelteUrl = new URL(request.url);
                 svelteUrl.hostname = 'svelte-otp-input-docs.pages.dev';
                 svelteUrl.pathname = pathWithoutPrefix;
@@ -18,25 +16,52 @@ export default {
                     body: request.body
                 });
 
+                // Handle redirects from SvelteKit
+                if (response.status >= 300 && response.status < 400) {
+                    const location = response.headers.get('location');
+                    if (location) {
+                        // If redirect is to root (/), redirect to /docs/svelte-otp-input/basic-usage
+                        if (location === '/') {
+                            return new Response(null, {
+                                status: response.status,
+                                statusText: response.statusText,
+                                headers: {
+                                    ...Object.fromEntries(response.headers),
+                                    'location': '/docs/svelte-otp-input/basic-usage'
+                                }
+                            });
+                        }
+                        // Otherwise add the prefix if not already there
+                        const newLocation = location.startsWith('/docs/svelte-otp-input')
+                            ? location
+                            : `/docs/svelte-otp-input${location}`;
+                        return new Response(null, {
+                            status: response.status,
+                            statusText: response.statusText,
+                            headers: {
+                                ...Object.fromEntries(response.headers),
+                                'location': newLocation
+                            }
+                        });
+                    }
+                }
+
                 // If it's HTML, rewrite relative paths
                 if (response.headers.get('content-type')?.includes('text/html')) {
                     let html = await response.text();
                     html = html.replace(/href="\/(?!\/)/g, 'href="/docs/svelte-otp-input/');
                     html = html.replace(/src="\/(?!\/)/g, 'src="/docs/svelte-otp-input/');
-
                     return new Response(html, {
                         status: response.status,
                         statusText: response.statusText,
                         headers: response.headers
                     });
                 }
-
                 return response;
             } catch (error) {
                 return new Response('Error proxying to Svelte docs: ' + error.message, { status: 500 });
             }
         }
-
         // For all other routes, let Next.js handle it
         return fetch(request);
     }
