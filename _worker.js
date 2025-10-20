@@ -1,6 +1,7 @@
 export default {
     async fetch(request, env) {
         const url = new URL(request.url);
+
         // Check if request is for Svelte docs
         if (url.pathname.startsWith('/docs/svelte-otp-input')) {
             try {
@@ -16,31 +17,22 @@ export default {
                     body: request.body
                 });
 
-                // Handle redirects from SvelteKit
+                // IMPORTANT: Check for redirects FIRST
                 if (response.status >= 300 && response.status < 400) {
                     const location = response.headers.get('location');
                     if (location) {
-                        // If redirect is to root (/), redirect to /docs/svelte-otp-input/basic-usage
-                        if (location === '/') {
-                            return new Response(null, {
-                                status: response.status,
-                                statusText: response.statusText,
-                                headers: {
-                                    ...Object.fromEntries(response.headers),
-                                    'location': '/docs/svelte-otp-input/basic-usage'
-                                }
-                            });
-                        }
-                        // Otherwise add the prefix if not already there
+                        // Rewrite the location to include /docs/svelte-otp-input prefix
                         const newLocation = location.startsWith('/docs/svelte-otp-input')
                             ? location
                             : `/docs/svelte-otp-input${location}`;
+
+                        // Return the redirect with rewritten location
                         return new Response(null, {
                             status: response.status,
                             statusText: response.statusText,
                             headers: {
-                                ...Object.fromEntries(response.headers),
-                                'location': newLocation
+                                'location': newLocation,
+                                'cache-control': 'no-cache'
                             }
                         });
                     }
