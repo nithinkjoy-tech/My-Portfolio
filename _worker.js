@@ -4,6 +4,16 @@ export default {
 
         // Check if request is for Svelte docs
         if (url.pathname.startsWith('/docs/svelte-otp-input')) {
+            // Redirect root to basic-usage at the Worker level
+            if (url.pathname === '/docs/svelte-otp-input' || url.pathname === '/docs/svelte-otp-input/') {
+                return new Response(null, {
+                    status: 307,
+                    headers: {
+                        'location': '/docs/svelte-otp-input/basic-usage'
+                    }
+                });
+            }
+
             try {
                 const pathWithoutPrefix = url.pathname.replace('/docs/svelte-otp-input', '') || '/';
                 const svelteUrl = new URL(request.url);
@@ -17,20 +27,16 @@ export default {
                     body: request.body
                 });
 
-                // IMPORTANT: Handle redirects FIRST - before anything else
-                const status = response.status;
-                if (status >= 300 && status < 400) {
+                // Handle redirects from SvelteKit
+                if (response.status >= 300 && response.status < 400) {
                     const location = response.headers.get('location');
                     if (location) {
-                        // Add the prefix to the redirect location
                         let newLocation = location;
                         if (!location.startsWith('/docs/svelte-otp-input')) {
                             newLocation = `/docs/svelte-otp-input${location}`;
                         }
-
-                        // Return redirect response - don't cache it
                         return new Response(null, {
-                            status: status,
+                            status: response.status,
                             statusText: response.statusText,
                             headers: {
                                 'location': newLocation,
@@ -43,8 +49,15 @@ export default {
                 // Only process HTML if NOT a redirect
                 if (response.headers.get('content-type')?.includes('text/html')) {
                     let html = await response.text();
+                    // Rewrite href attributes
                     html = html.replace(/href="\/(?!\/)/g, 'href="/docs/svelte-otp-input/');
+                    // Rewrite src attributes
                     html = html.replace(/src="\/(?!\/)/g, 'src="/docs/svelte-otp-input/');
+                    // Rewrite relative paths starting with ./
+                    html = html.replace(/href="\.\//g, 'href="/docs/svelte-otp-input/');
+                    html = html.replace(/src="\.\//g, 'src="/docs/svelte-otp-input/');
+                    // Rewrite import paths
+                    html = html.replace(/from\s+["']\/(?!\/)/g, 'from "/docs/svelte-otp-input/');
                     return new Response(html, {
                         status: response.status,
                         statusText: response.statusText,
