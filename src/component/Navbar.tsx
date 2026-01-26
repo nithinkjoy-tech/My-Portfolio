@@ -10,7 +10,7 @@ import { detectMobileWidth } from '../helper/utils.js';
 import { SiLeetcode } from 'react-icons/si';
 import Toast from './common/toatMessage';
 export default function Navbar() {
-  const ref = useRef<string | any>();
+  const ref = useRef<HTMLDivElement | null>(null);
   const [showMenu, setShowMenu] = useState(false);
   const [isMobile, setIsMobile] = useState<any>(false);
 
@@ -152,7 +152,7 @@ export default function Navbar() {
             </div>
             {showMenu && (
                 <div
-                    ref={(node) => (ref.current = node)}
+                    ref={ref}
                     className='fixed mdl:hidden top-0 right-0 w-full h-screen bg-black bg-opacity-50 flex fkex-col items-end'
                 >
                     <motion.div
