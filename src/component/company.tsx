@@ -1,4 +1,3 @@
-'use client';
 import { TiArrowForward } from 'react-icons/ti';
 export default function Company() {
   return (

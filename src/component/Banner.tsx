@@ -1,32 +1,9 @@
-'use client';
-import { animate } from 'animejs';
-import { useEffect } from 'react';
 export default function Banner() {
-  useEffect(() => {
-    // Animate the entire banner container
-    animate('.banner-container', {
-      opacity: [0, 1],
-      translateY: [40, 0],
-      easing: 'easeOutExpo',
-      duration: 1000,
-    });
-
-    // Animate each span letter
-    animate('.animated-span', {
-      translateY: [
-        { value: '-2.75rem', duration: 1000, easing: 'easeOutExpo' },
-        { value: 0, duration: 800, delay: 100, easing: 'easeOutBounce' },
-      ],
-      rotate: [{ value: -360, duration: 1000, delay: 0 }],
-      delay: (_, i) => i * 50,
-      easing: 'inOutCirc',
-    });
-  }, []);
 
   return (
     <section
       id='home'
-      className='banner-container max-w-contentContainer mx-auto py-10 mdl:py-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4 opacity-0'
+      className='banner-container max-w-contentContainer mx-auto py-10 mdl:py-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4'
     >
       <h3 className='text-lg font-titleFont tracking-wide text-textGreen'>
         Hi, my name is
